@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "*.lst": "iar",
+        "*.s": "arm",
+        "stm32f10x.h": "c",
+        "system_stm32f10x.h": "c",
+        "core_cm3.h": "c",
+        "modbus.h": "c",
+        "meander.h": "c",
+        "math.h": "c"
+    }
+}
