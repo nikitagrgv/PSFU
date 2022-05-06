@@ -108,9 +108,9 @@ void USART3_IRQHandler(void)
         UART_VALUE = UART_VALUE_TMP;
 
         // calculate compare values for sifu
-        COMPARE1 = (uint16_t)(159.155 * acosf(0.0040145f * UART_VALUE - 1.f) + 83.3333f) % 1000;
-        COMPARE2 = (uint16_t)(159.155 * acosf(0.0040145f * UART_VALUE - 1.f) + 416.667f) % 1000;
-        COMPARE3 = (uint16_t)(159.155 * acosf(0.0040145f * UART_VALUE - 1.f) + 750.f) % 1000;
+        COMPARE1 = (uint16_t)(159.155f * acosf(0.0040145f * UART_VALUE - 1.f) + 83.3333f) % 1000;
+        COMPARE2 = (uint16_t)(COMPARE1 + 333) % 1000;
+        COMPARE3 = (uint16_t)(COMPARE2 + 333) % 1000;
 
         GPIOA->BSRR = GPIO_BSRR_BR0 |
                       GPIO_BSRR_BR1 |

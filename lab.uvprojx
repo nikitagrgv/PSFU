@@ -403,6 +403,11 @@
               <FileType>5</FileType>
               <FilePath>.\sifu.h</FilePath>
             </File>
+            <File>
+              <FileName>crc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\crc.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -3,6 +3,8 @@
         {
             "name": "Target 1",
             "includePath": [
+                "C:\\Keil_v5\\ARM\\ARMCC\\include",
+                "C:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
                 "c:\\Users\\nekita\\Desktop\\kurPSFU\\code"
             ],
             "defines": [
