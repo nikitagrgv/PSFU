@@ -78,7 +78,7 @@ void InitPeriph()
     // TIM3 - for modbus packets separaion. 1.5 symbols - separate time
     // -------------------------------------------------------------------------
     TIM3->PSC = 720 - 1;       // reduce clock frequency to 100kHz
-    TIM3->ARR = 260 - 1;       // auto reload value for period of 1+1.5 symbols
+    TIM3->ARR = 156 - 1;       // auto reload value for period of 1.5 symbols
     TIM3->DIER = TIM_DIER_UIE; // enable update interrupt
     TIM3->CR1 = TIM_CR1_CEN;   // start timer
 
