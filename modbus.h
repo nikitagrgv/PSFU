@@ -142,7 +142,6 @@ void ProcessPacket()
                 Modbus.out.data[Modbus.out.size++] = UART_VALUE;      // low byte
             }
         }
-        AddCRC();
     }
     else
     {
