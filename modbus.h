@@ -56,6 +56,15 @@ void TransmitResponse()
         USART1->DR = Modbus.out.data[i];
     }
 
+    // doesn't work in proteus :(
+    // USART1->SR &= ~USART_SR_TC;
+    // while (!(USART1->SR & USART_SR_TC))
+    //     ;
+
+    // wait for transmitting last byte
+    for (volatile uint16_t i = 0; i < 450; i++)
+        ;
+
     // enable receiver mode by setting low level on A11
     GPIOA->BSRR = GPIO_BSRR_BR11;
 }
