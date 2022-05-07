@@ -27,7 +27,8 @@ void InitPeriph()
     GPIOA->CRL = 0x00000222;
     // A9 - alternate push pull output - USART1 TX
     // A10 - floating input - USART1 RX
-    GPIOA->CRH = 0x000004B0;
+    // A11 - push pull output - for RS485 receive/transmit switching
+    GPIOA->CRH = 0x000024B0;
     // B0 - floating input - EXTI for meander measurement
     // B1 - floating input - EXTI for SIFU
     // B6 - alternate push pull output - TIM4 ouput, for PWM

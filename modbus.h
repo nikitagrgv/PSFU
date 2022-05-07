@@ -44,6 +44,9 @@ void AddCRC()
 // transmit response via USART1
 void TransmitResponse()
 {
+    // enable driver mode by setting high level on A11
+    GPIOA->BSRR = GPIO_BSRR_BS11;
+
     for (uint8_t i = 0; i < Modbus.out.size; i++)
     {
         // wait for USART ready
@@ -52,6 +55,9 @@ void TransmitResponse()
         // transmit current byte
         USART1->DR = Modbus.out.data[i];
     }
+
+    // enable receiver mode by setting low level on A11
+    GPIOA->BSRR = GPIO_BSRR_BR11;
 }
 
 // form response with error code (without CRC)
