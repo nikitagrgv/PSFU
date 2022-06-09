@@ -79,8 +79,8 @@
       </OPTFL>
       <CpuCode>18</CpuCode>
       <DebugOpt>
-        <uSim>1</uSim>
-        <uTrg>0</uTrg>
+        <uSim>0</uSim>
+        <uTrg>1</uTrg>
         <sLdApp>1</sLdApp>
         <sGomain>1</sGomain>
         <sRbreak>1</sRbreak>
@@ -157,25 +157,25 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>132</LineNumber>
+          <LineNumber>48</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134221212</Address>
+          <Address>134220378</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\main.c</Filename>
+          <Filename>.\modbus.h</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\lab\main.c\132</Expression>
+          <Expression>\\lab\modbus.h\48</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>106</LineNumber>
+          <LineNumber>46</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134219352</Address>
+          <Address>134220376</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -184,23 +184,7 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>.\modbus.h</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\lab\main.c\106</Expression>
-        </Bp>
-        <Bp>
-          <Number>2</Number>
-          <Type>0</Type>
-          <LineNumber>107</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134219370</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\modbus.h</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\lab\main.c\107</Expression>
+          <Expression>\\lab\modbus.h\46</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -302,7 +286,7 @@
         <aSer3>1</aSer3>
         <eProf>0</eProf>
         <aLa>0</aLa>
-        <aPa1>1</aPa1>
+        <aPa1>0</aPa1>
         <AscS4>0</AscS4>
         <aSer4>0</aSer4>
         <StkLoc>1</StkLoc>
@@ -323,28 +307,12 @@
       <pszMrulep></pszMrulep>
       <pSingCmdsp></pSingCmdsp>
       <pMultCmdsp></pMultCmdsp>
-      <LogicAnalyzers>
-        <Wi>
-          <IntNumber>0</IntNumber>
-          <FirstString>(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x0800))-&gt;IDR &amp; 1 &amp; 0x1) &gt;&gt; 0</FirstString>
-          <SecondString>000000000000000000000000000000000000F03F0000000000000000000000000000000028284750494F5F54797065446566202A29202828282875696E7433325F74293078343030303030303029202B203078313030303029202B2030783038303029292D3E49445220262031000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000500000001000000000000000000D03F130000000000000000000000000000000000000098070008</SecondString>
-        </Wi>
-        <Wi>
-          <IntNumber>1</IntNumber>
-          <FirstString>(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x0800))-&gt;IDR &amp; 2 &amp; 0x2) &gt;&gt; 0</FirstString>
-          <SecondString>FF0000000000000000000000000000000000F03F0000000000000000000000000000000028284750494F5F54797065446566202A29202828282875696E7433325F74293078343030303030303029202B203078313030303029202B2030783038303029292D3E49445220262032000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000500000002000000000000000000D03F130000000000000000000000000000000000000098070008</SecondString>
-        </Wi>
-        <Wi>
-          <IntNumber>2</IntNumber>
-          <FirstString>(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x0800))-&gt;IDR &amp; 4 &amp; 0x4) &gt;&gt; 0</FirstString>
-          <SecondString>008000000000000000000000000000000000F03F0000000000000000000000000000000028284750494F5F54797065446566202A29202828282875696E7433325F74293078343030303030303029202B203078313030303029202B2030783038303029292D3E49445220262034000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000500000003000000000000000000D03F130000000000000000000000000000000000000098070008</SecondString>
-        </Wi>
-        <Wi>
-          <IntNumber>3</IntNumber>
-          <FirstString>(((GPIO_TypeDef *) ((((uint32_t)0x40000000) + 0x10000) + 0x0C00))-&gt;IDR &amp; 2 &amp; 0x2) &gt;&gt; 0</FirstString>
-          <SecondString>000000000000000000000000000000000000F03F0000000000000000000000000000000028284750494F5F54797065446566202A29202828282875696E7433325F74293078343030303030303029202B203078313030303029202B2030783043303029292D3E49445220262032000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000500000004000000000000000000D03F1300000000000000000000000000000000000000C4070008</SecondString>
-        </Wi>
-      </LogicAnalyzers>
+      <SystemViewers>
+        <Entry>
+          <Name>System Viewer\USART1</Name>
+          <WinId>35905</WinId>
+        </Entry>
+      </SystemViewers>
       <DebugDescription>
         <Enable>1</Enable>
         <EnableFlashSeq>0</EnableFlashSeq>

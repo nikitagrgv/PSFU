@@ -56,11 +56,6 @@ void TransmitResponse()
         USART1->DR = Modbus.out.data[i];
     }
 
-    // doesn't work in proteus :(
-    // USART1->SR &= ~USART_SR_TC;
-    // while (!(USART1->SR & USART_SR_TC))
-    //     ;
-
     // wait for transmitting last byte
     for (volatile uint16_t i = 0; i < 450; i++)
         ;
@@ -198,7 +193,7 @@ void USART1_IRQHandler(void)
     Modbus.in.size++;
 }
 
-// TIM3 interrupt. For modbus packets separation. Triggers after 3.5 bytes pause
+// TIM3 interrupt. For modbus packets separation. Triggers after 3.5+1 bytes pause
 void TIM3_IRQHandler(void)
 {
     // clear interrupt flag
